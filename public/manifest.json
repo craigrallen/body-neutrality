@@ -1,0 +1,11 @@
+{
+  "name": "Body Neutrality Mirror",
+  "short_name": "BN Mirror",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#FFF8F0",
+  "icons": [
+    { "src": "/vite.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

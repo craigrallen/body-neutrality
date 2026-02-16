@@ -1,0 +1,76 @@
+export const PROMPTS = [
+  "My legs carried me through the day",
+  "My hands created something today",
+  "My eyes noticed something beautiful",
+  "My lungs gave me a deep, calming breath",
+  "My arms hugged someone I love",
+  "My voice spoke up for myself",
+  "My ears listened to my favorite song",
+  "My feet danced, even just a little",
+  "My mind solved a tricky problem",
+  "My body let me rest when I needed it",
+  "My fingers typed words that mattered",
+  "My nose smelled something wonderful",
+  "My tongue tasted a delicious meal",
+  "My heart kept beating, steady and strong",
+  "My back supported me all day long",
+  "My hands held a warm cup of tea",
+  "My legs took me on a peaceful walk",
+  "My body healed a little more today",
+];
+
+export const CATEGORIES: Record<string, { keywords: string[]; label: string }> = {
+  movement: { keywords: ['walk', 'ran', 'run', 'dance', 'climb', 'swim', 'jump', 'stretch', 'yoga', 'exercise', 'carried', 'lift', 'move', 'hike', 'bike', 'step'], label: '🌳 Movement' },
+  senses: { keywords: ['see', 'saw', 'hear', 'heard', 'smell', 'taste', 'touch', 'feel', 'listen', 'watch', 'notice', 'eyes', 'ears', 'nose', 'tongue', 'skin'], label: '🌸 Senses' },
+  creation: { keywords: ['create', 'made', 'make', 'write', 'wrote', 'draw', 'paint', 'cook', 'build', 'craft', 'type', 'sing', 'play', 'compose', 'design'], label: '🌿 Creation' },
+  rest: { keywords: ['rest', 'sleep', 'slept', 'nap', 'relax', 'breathe', 'breath', 'calm', 'heal', 'recover', 'pause'], label: '🍃 Rest' },
+  connection: { keywords: ['hug', 'hold', 'held', 'kiss', 'smile', 'laugh', 'talk', 'spoke', 'voice', 'wave', 'shake'], label: '💛 Connection' },
+};
+
+export const BODY_PARTS: Record<string, string[]> = {
+  head: ['head', 'mind', 'brain', 'think', 'thought'],
+  eyes: ['eyes', 'see', 'saw', 'watch', 'notice', 'look', 'read'],
+  ears: ['ears', 'hear', 'heard', 'listen'],
+  mouth: ['mouth', 'taste', 'tongue', 'speak', 'spoke', 'voice', 'sing', 'smile', 'laugh', 'eat', 'ate'],
+  nose: ['nose', 'smell', 'breathe', 'breath'],
+  shoulders: ['shoulders', 'carry', 'carried'],
+  arms: ['arms', 'hug', 'hold', 'held', 'embrace', 'lift', 'reach'],
+  hands: ['hands', 'fingers', 'type', 'write', 'wrote', 'draw', 'paint', 'cook', 'craft', 'touch', 'create', 'made', 'make', 'build'],
+  chest: ['chest', 'heart', 'lungs', 'breathe', 'breath'],
+  back: ['back', 'support', 'posture', 'spine'],
+  core: ['core', 'stomach', 'digest', 'gut'],
+  legs: ['legs', 'walk', 'ran', 'run', 'dance', 'climb', 'jump', 'step', 'hike', 'knees', 'squat'],
+  feet: ['feet', 'toes', 'stand', 'stood', 'balance', 'kick'],
+};
+
+export const AFFIRMATIONS = [
+  "My body is an instrument, not an ornament.",
+  "I am grateful for what my body can do.",
+  "My worth is not measured in pounds or inches.",
+  "Today I choose to appreciate my body's functions.",
+  "My body carries me through life — that is enough.",
+  "I don't owe anyone beauty. I owe myself kindness.",
+  "Every breath is a gift from my body to me.",
+  "My body is my oldest companion and truest home.",
+  "I release the need to judge what I see in the mirror.",
+  "What my body does matters more than how it looks.",
+  "I am more than a body. I am a whole person.",
+  "My body has survived 100% of my hardest days.",
+  "I choose function over form, gratitude over criticism.",
+  "This body lets me experience the world. That's magic.",
+  "I honor my body by listening to what it needs.",
+  "My body tells a story of resilience and strength.",
+  "I am learning to be neutral — and that's powerful.",
+  "Today, I thank my body instead of criticizing it.",
+];
+
+export const MILESTONES: Record<number, string> = {
+  1: "🌱 First seed planted!",
+  3: "🌿 Three days of gratitude!",
+  7: "🌻 One week of appreciation!",
+  14: "🌳 Two weeks strong!",
+  21: "✨ Three weeks — a new habit forming!",
+  30: "🏵️ One month of body neutrality!",
+  50: "🌈 Fifty entries of kindness!",
+  100: "💫 One hundred acts of gratitude!",
+};

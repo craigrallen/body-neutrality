@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FFF8F0;
+  --color-blush: #F4C2C2;
+  --color-peach: #FFDAB9;
+  --color-coral: #F7946B;
+  --color-sage: #9DC183;
+  --color-sage-dark: #6B8E5A;
+  --color-warm: #E8967A;
+  --color-lavender: #D4B8E0;
+  --color-gold: #F0C75E;
+  --color-bark: #8B6F47;
+}
+
+body {
+  background: var(--color-cream);
+  font-family: 'Georgia', serif;
+}
+
+/* Garden animations */
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+@keyframes grow {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+@keyframes bloom {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+@keyframes vine-grow {
+  from { stroke-dashoffset: 200; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes celebration {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.sway { animation: sway 3s ease-in-out infinite; transform-origin: bottom center; }
+.grow-in { animation: grow 0.8s ease-out forwards; transform-origin: bottom center; }
+.bloom-in { animation: bloom 0.6s ease-out forwards; }
+.float-anim { animation: float 3s ease-in-out infinite; }
+.sparkle { animation: sparkle 2s ease-in-out infinite; }
+.fade-in { animation: fadeIn 0.5s ease-out forwards; }
+.celebrate { animation: celebration 0.6s ease-in-out; }
+
+/* Word cloud sizing */
+.word-xs { font-size: 0.75rem; opacity: 0.6; }
+.word-sm { font-size: 1rem; opacity: 0.7; }
+.word-md { font-size: 1.25rem; opacity: 0.8; }
+.word-lg { font-size: 1.75rem; opacity: 0.9; }
+.word-xl { font-size: 2.25rem; opacity: 1; }
+
+/* Swipe cards */
+.card-stack > div {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
