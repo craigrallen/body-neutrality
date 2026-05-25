@@ -19,6 +19,10 @@ const PART_POSITIONS: Record<string, { cx: number; cy: number; r: number; label:
   feet:      { cx: 50, cy: 85, r: 5, label: 'Feet' },
 };
 
+const ANIMATION_DELAYS: Record<string, string> = Object.fromEntries(
+  Object.keys(PART_POSITIONS).map(part => [part, `${Math.random() * 2}s`])
+);
+
 export default function BodyMap({ state }: Props) {
   const counts = getBodyPartCounts(state);
   const max = Math.max(1, ...Object.values(counts));
@@ -50,7 +54,7 @@ export default function BodyMap({ state }: Props) {
                   fill={count > 0 ? color : '#E8E0D8'}
                   opacity={count > 0 ? 0.3 + intensity * 0.5 : 0.15}
                   className={count > 0 ? 'sparkle' : ''}
-                  style={{ animationDelay: `${Math.random() * 2}s` }}
+                  style={{ animationDelay: ANIMATION_DELAYS[part] }}
                 />
                 {count > 0 && (
                   <text x={pos.cx} y={pos.cy + 1} textAnchor="middle" fontSize="3" fill="#8B6F47" fontWeight="bold">

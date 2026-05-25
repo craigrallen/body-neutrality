@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { PROMPTS } from '../data';
 import type { AppState } from '../types';
 import { addEntry } from '../store';
@@ -10,12 +10,8 @@ interface Props {
 
 export default function DailyPrompt({ state, onUpdate }: Props) {
   const [text, setText] = useState('');
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState(() => PROMPTS[Math.floor(Math.random() * PROMPTS.length)]);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    setPrompt(PROMPTS[Math.floor(Math.random() * PROMPTS.length)]);
-  }, []);
 
   const today = new Date().toISOString().slice(0, 10);
   const todayEntries = state.entries.filter(e => e.date === today);
